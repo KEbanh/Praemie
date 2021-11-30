@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Prämienrechner</title>
+		
+		<script>
+			"use strict";
+
+			
+				function  clicked(){
+				let Umsatz  = document.getElementById("idEingabe").value;
+				let ausgabe = "Prämie bei " + Umsatz +" €: " +  Praemie(Umsatz);
+				document.getElementById("idAusgabe").innerHTML = ausgabe;
+			}
+			function Praemie(Umsatz) {
+						
+						if (Umsatz<50000) { return "Nichts"}
+						else if (Umsatz<100000){ return "Blumen"}
+						else if (Umsatz<150000){ return "Buchgutschein"}
+						else { return "Reise"}
+			}
+			
+		</script>
+	</head>
+		
+		
+
+
+	<body>
+		<h1>Jahresumsatz Prämien</h1>
+		Jahresumsatz <input id="idEingabe" type="text" value=""> <br /> <br />
+		<button onClick="clicked();"> Ausrechnen </button>
+		<br>
+		<div id="idAusgabe">Ergebnis</div>
+
+
+</body></html>
